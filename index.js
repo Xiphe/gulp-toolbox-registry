@@ -4,12 +4,14 @@ var path = require('path');
 var gutil = require('gulp-util');
 var _ = require('lodash');
 
-module.exports = function(config) {
-  var basePath;
-
+function validate(config) {
   if (!config.gulp) {
     throw new Error('Missing local gulp');
   }
+}
+
+function loadToolboxes(config) {
+  var basePath;
 
   try {
     basePath = require('findup').sync(process.cwd(), 'package.json');
@@ -31,4 +33,10 @@ module.exports = function(config) {
       }
     });
   }
+}
+
+module.exports = function(config) {
+  validate(config);
+
+  loadToolboxes(config);
 };
