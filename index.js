@@ -4,6 +4,7 @@ var path = require('path');
 var gutil = require('gulp-util');
 var gulpHelp = require('gulp-help');
 var _ = require('lodash');
+var di = require('di');
 
 function validate(config) {
   if (!config.gulp) {
@@ -13,6 +14,12 @@ function validate(config) {
 
 function amendGulpHelp(config) {
   config.gulp = gulpHelp(config.gulp);
+}
+
+function getInjector(config) {
+  return new di.Injector([{
+    gulp: ['value', config.gulp]
+  }]);
 }
 
 function setBasePath(config) {
@@ -59,8 +66,9 @@ module.exports = function(config) {
   validate(config);
   setDefaults(config);
   amendGulpHelp(config);
+  var injector = getInjector(config);
 
   getToolboxes(config).forEach(function(toolbox) {
-    toolbox(config);
+    injector.invoke(toolbox);
   });
 };
