@@ -2,12 +2,17 @@
 
 var path = require('path');
 var gutil = require('gulp-util');
+var gulpHelp = require('gulp-help');
 var _ = require('lodash');
 
 function validate(config) {
   if (!config.gulp) {
     throw new Error('Missing local gulp');
   }
+}
+
+function amendGulpHelp(config) {
+  config.gulp = gulpHelp(config.gulp);
 }
 
 function loadToolboxes(config) {
@@ -37,6 +42,8 @@ function loadToolboxes(config) {
 
 module.exports = function(config) {
   validate(config);
+
+  amendGulpHelp(config);
 
   loadToolboxes(config);
 };
