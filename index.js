@@ -15,7 +15,7 @@ function amendGulpHelp(config) {
   config.gulp = gulpHelp(config.gulp);
 }
 
-function loadToolboxes(config) {
+function setBasePath(config) {
   var basePath;
 
   try {
@@ -24,26 +24,43 @@ function loadToolboxes(config) {
     gutil.log(gutil.colors.red('can not find package.json. Aborting.'));
     process.exit(1);
   }
-  var pkg = require(path.join(basePath, 'package.json'));
 
   config.basePath = basePath;
-  config.pkg = pkg;
+}
 
-  if (pkg.devDependencies) {
-    _.forEach(pkg.devDependencies, function(version, devDependency) {
+function setPkg(config) {
+  config.pkg = require(path.join(config.basePath, 'package.json'));
+}
+
+function setDefaults(config) {
+  setBasePath(config);
+  setPkg(config);
+}
+
+function getToolboxes(config) {
+  var toolboxes = [];
+
+  if (config.pkg.devDependencies) {
+    _.forEach(config.pkg.devDependencies, function(version, devDependency) {
       if (devDependency.indexOf('gulp-toolbox-') === 0) {
-        require(
-          path.join(basePath, 'node_modules', devDependency)
-        )(config);
+        toolboxes.push(
+          require(
+            path.join(config.basePath, 'node_modules', devDependency)
+          )
+        );
       }
     });
   }
+
+  return toolboxes;
 }
 
 module.exports = function(config) {
   validate(config);
-
+  setDefaults(config);
   amendGulpHelp(config);
 
-  loadToolboxes(config);
+  getToolboxes(config).forEach(function(toolbox) {
+    toolbox(config);
+  });
 };
