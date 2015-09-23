@@ -1,4 +1,3 @@
-/* jshint jasmine: true */
 describe('#validateConfig', function() {
   'use strict';
 
