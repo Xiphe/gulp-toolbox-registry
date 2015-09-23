@@ -5,12 +5,7 @@ var gutil = require('gulp-util');
 var gulpHelp = require('gulp-help');
 var _ = require('lodash');
 var di = require('di');
-
-function validate(config) {
-  if (!config.gulp) {
-    throw new Error('Missing local gulp');
-  }
-}
+var validateConfig = require('./lib/validateConfig');
 
 function amendGulpHelp(config) {
   config.gulp = gulpHelp(config.gulp);
@@ -63,7 +58,7 @@ function getToolboxes(config) {
 }
 
 module.exports = function(config) {
-  validate(config);
+  validateConfig(config);
   setDefaults(config);
   amendGulpHelp(config);
   var injector = getInjector(config);
