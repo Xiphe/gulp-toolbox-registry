@@ -19,5 +19,9 @@
     "gulp-help": "^1.6.1",
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-toolbox-test-node-jasmine": "*"
   }
 }
