@@ -13,7 +13,8 @@ function amendGulpHelp(config) {
 
 function getInjector(config) {
   return new di.Injector([{
-    gulp: ['value', config.gulp]
+    gulp: ['value', config.gulp],
+    hook: ['factory', require('./lib/hook')]
   }]);
 }
 
