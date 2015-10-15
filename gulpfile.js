@@ -1,5 +1,3 @@
-
-var gulp = require('gulp');
 require('./index')({
-  gulp: gulp
+  gulp: require('gulp')
 });
