@@ -16,13 +16,13 @@ function getToolboxes(config) {
   var toolboxes = [];
 
   if (config.pkg.devDependencies) {
-    _.forEach(config.pkg.devDependencies, function(version, devDependency) {
-      if (devDependency.indexOf('gulp-toolbox-') === 0) {
-        toolboxes.push(
-          require(
-            path.join(config.basePath, 'node_modules', devDependency)
-          )
-        );
+    _.forEach(config.pkg.devDependencies, (version, devDependency) => {
+      if (devDependency.startsWith('gulp-toolbox-')) {
+        toolboxes.push(require(path.join(
+          config.basePath,
+          'node_modules',
+          devDependency
+        )));
       }
     });
   }
@@ -35,7 +35,5 @@ module.exports = function(config) {
   setDefaults(config);
   var injector = getInjector(config);
 
-  getToolboxes(config).forEach(function(toolbox) {
-    injector.invoke(toolbox);
-  });
+  getToolboxes(config).forEach(toolbox => injector.invoke(toolbox));
 };
