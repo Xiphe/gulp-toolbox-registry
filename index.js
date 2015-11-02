@@ -1,15 +1,10 @@
 'use strict';
 
 var path = require('path');
-var gulpHelp = require('gulp-help');
 var _ = require('lodash');
 var di = require('di');
 var validateConfig = require('./lib/validateConfig');
 var setDefaults = require('./lib/setDefaults');
-
-function amendGulpHelp(config) {
-  config.gulp = gulpHelp(config.gulp);
-}
 
 function getInjector(config) {
   return new di.Injector([{
@@ -39,7 +34,6 @@ function getToolboxes(config) {
 module.exports = function(config) {
   validateConfig(config);
   setDefaults(config);
-  amendGulpHelp(config);
   var injector = getInjector(config);
 
   getToolboxes(config).forEach(function(toolbox) {

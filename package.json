@@ -19,7 +19,6 @@
   "dependencies": {
     "di": "0.0.1",
     "findup": "^0.1.5",
-    "gulp-help": "^1.6.1",
     "gulp-util": "^3.0.6",
     "lodash": "^3.10.1"
   },
