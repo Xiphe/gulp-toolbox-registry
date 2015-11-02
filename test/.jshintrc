@@ -1,4 +1,5 @@
 {
   "extends": "../.jshintrc",
-  "jasmine": "true"
+  "maxstatements": false,
+  "jasmine": true
 }
