@@ -8,8 +8,7 @@ var setDefaults = require('./lib/setDefaults');
 
 function getInjector(config) {
   return new di.Injector([{
-    gulp: ['value', config.gulp],
-    hook: ['factory', require('./lib/hook')]
+    gulp: ['value', config.gulp]
   }]);
 }
 
