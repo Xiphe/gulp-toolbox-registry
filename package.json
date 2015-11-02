@@ -17,9 +17,10 @@
     "node": "^5.0.0"
   },
   "dependencies": {
+    "chalk": "^1.1.1",
     "di": "0.0.1",
     "findup": "^0.1.5",
-    "gulp-util": "^3.0.6",
+    "gulplog": "^1.0.0",
     "lodash": "^3.10.1"
   },
   "devDependencies": {

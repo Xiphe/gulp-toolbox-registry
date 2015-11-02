@@ -3,7 +3,8 @@ describe('#setDefaults', function() {
 
   var path = require('path');
   var findup = require('findup');
-  var gutil = require('gulp-util');
+  var chalk = require('chalk');
+  var logger = require('gulplog');
   var constants = require('../lib/contants');
   var setDefaults = require('../lib/setDefaults');
   var config;
@@ -20,12 +21,12 @@ describe('#setDefaults', function() {
   it('should log error and exit process if findup fails', function() {
     var basePath = setDefaults({}).basePath;
     spyOn(findup, 'sync').and.throwError();
-    spyOn(gutil, 'log');
     spyOn(process, 'exit');
+    spyOn(logger, 'error');
     spyOn(path, 'join').and.returnValue(basePath);
     setDefaults(config);
-    expect(gutil.log).toHaveBeenCalledWith(
-      gutil.colors.red(constants.ERROR_NO_PACKAGE_JSON_FOUND)
+    expect(logger.error).toHaveBeenCalledWith(
+      chalk.red(constants.ERROR_NO_PACKAGE_JSON_FOUND)
     );
     expect(process.exit).toHaveBeenCalledWith(1);
   });
