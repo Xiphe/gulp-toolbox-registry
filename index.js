@@ -5,6 +5,7 @@ var _ = require('lodash');
 var di = require('di');
 var validateConfig = require('./lib/validateConfig');
 var setDefaults = require('./lib/setDefaults');
+var groupie = require('./lib/groupie');
 
 function getInjector(config) {
   return new di.Injector([{
@@ -36,4 +37,5 @@ module.exports = function(config) {
   var injector = getInjector(config);
 
   getToolboxes(config).forEach(toolbox => injector.invoke(toolbox));
+  groupie.run(config);
 };
