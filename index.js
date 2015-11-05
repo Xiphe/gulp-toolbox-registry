@@ -12,10 +12,12 @@ function getInjector(config) {
   }]);
 }
 
-module.exports = function(config) {
+module.exports = function initGulpToolbox(config) {
+  var injector = null;
+
   validateConfig(config);
   setDefaults(config);
-  var injector = getInjector(config);
+  injector = getInjector(config);
 
   forEachToolbox(config, (toolboxName, taskFactory) => {
     config.gulp.task(

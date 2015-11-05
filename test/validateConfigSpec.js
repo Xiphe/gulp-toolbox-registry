@@ -1,26 +1,29 @@
-describe('#validateConfig', function() {
-  'use strict';
+'use strict';
 
-  var validateConfig = require('../lib/validateConfig');
+var validateConfig = require('../lib/validateConfig');
+var gulp = require('gulp');
+
+describe('#validateConfig', () => {
   var validConfig = null;
 
-  beforeEach(function() {
+  beforeEach(() => {
     validConfig = {
-      gulp: require('gulp')
+      gulp
     };
   });
 
-  it('should not throw when config is valid', function() {
-    expect(function() {
+  it('should not throw when config is valid', () => {
+    expect(() => {
       validateConfig(validConfig);
     }).not.toThrow();
   });
 
-  it('should throw when config has no gulp key', function() {
+  it('should throw when config has no gulp key', () => {
     var invalidConfig = validConfig;
+
     delete invalidConfig.gulp;
 
-    expect(function() {
+    expect(() => {
       validateConfig(invalidConfig);
     }).toThrow();
   });
