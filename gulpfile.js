@@ -3,4 +3,13 @@
 var gulp = require('gulp');
 var gulpToolbox = require('./index');
 
-gulpToolbox({gulp});
+gulpToolbox({
+  gulp,
+  files: {
+    test: {
+      node: {
+        specs: ['test/**/*Spec.js']
+      }
+    }
+  }
+});
