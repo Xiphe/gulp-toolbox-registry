@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require('./lib/init');
+module.exports = require('./lib/GulpToolboxRegistry');
