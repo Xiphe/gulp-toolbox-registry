@@ -10,20 +10,7 @@ var optionalCoverageIstanbul = require(
 gulp.registry(new GulpToolboxRegistry({
   toolboxes: [
     testNodeJasmine,
-    optionalCoverageIstanbul,
-    {
-      meta: {
-        name: 'test:bla',
-        description: 'fresse',
-        bugs: 'keine'
-      },
-      getTask: () => {
-        return (done) => {
-          console.log('custom task');
-          done();
-        };
-      }
-    }
+    optionalCoverageIstanbul
   ],
   config: {
     files: {
