@@ -1,7 +1,7 @@
 {
-  "name": "gulp-toolbox",
+  "name": "gulp-toolbox-registry",
   "version": "0.0.0",
-  "description": "basic organizer for gulp-toolbox",
+  "description": "custom undertaker registry for gulp toolboxes",
   "main": "index.js",
   "scripts": {
     "test": "gulp test-node-jasmine"
