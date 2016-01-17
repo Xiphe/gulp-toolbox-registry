@@ -17,12 +17,12 @@
     "node": "^5.0.0"
   },
   "dependencies": {
-    "undertaker-registry": "^1.0.0",
+    "undertaker-registry": "1.0.0",
     "uberconfig": "0.0.1"
   },
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-toolbox-test-node-jasmine": "*",
-    "gulp-toolbox-helper-coverage-istanbul": "*"
+    "gulp-toolbox-test-node-jasmine": "0.0.0",
+    "gulp-toolbox-helper-coverage-istanbul": "0.0.0"
   }
 }
