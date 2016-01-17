@@ -17,7 +17,6 @@
     "node": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^3.10.1",
     "undertaker-registry": "^1.0.0",
     "uberconfig": "0.0.1"
   },
