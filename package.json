@@ -17,8 +17,9 @@
     "node": "^5.0.0"
   },
   "dependencies": {
-    "undertaker-registry": "1.0.0",
-    "uberconfig": "0.0.1"
+    "gulplog": "^1.0.0",
+    "uberconfig": "0.0.1",
+    "undertaker-registry": "1.0.0"
   },
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
