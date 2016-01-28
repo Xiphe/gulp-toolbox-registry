@@ -1,6 +1,6 @@
 'use strict';
 
-var startsWith = require('../lib/startsWith');
+var startsWith = require('../lib/plugins/groupTasks/startsWith');
 
 describe('startsWith', () => {
   it('returns a filter for displayNames', () => {
