@@ -24,6 +24,7 @@
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
     "gulp-toolbox-test-node-jasmine": "0.0.0",
-    "gulp-toolbox-helper-coverage-istanbul": "0.0.0"
+    "gulp-toolbox-helper-coverage-istanbul": "0.0.0",
+    "undertaker-task-provider-registry": "0.0.1"
   }
 }
