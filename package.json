@@ -1,10 +1,10 @@
 {
   "name": "gulp-toolbox-registry",
   "version": "0.0.0",
-  "description": "custom gulp registry for gulp toolboxes",
+  "description": "custom gulp registry for toolboxes",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test-node-jasmine"
+    "test": "gulp test"
   },
   "keywords": [
     "gulp",
