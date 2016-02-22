@@ -18,13 +18,15 @@
   },
   "dependencies": {
     "gulplog": "^1.0.0",
+    "through2": "^2.0.1",
     "uberconfig": "0.0.1",
+    "undertaker": "^0.14.0",
     "undertaker-registry": "1.0.0"
   },
   "devDependencies": {
     "gulp": "gulpjs/gulp#4.0",
     "gulp-toolbox-test-node-jasmine": "0.0.0",
-    "gulp-toolbox-helper-coverage-istanbul": "0.0.0",
-    "undertaker-task-provider-registry": "0.0.1"
+    "gulp-toolbox-pipe-coverage-istanbul": "0.0.0",
+    "undertaker-task-provider-registry": "1.0.0"
   }
 }
