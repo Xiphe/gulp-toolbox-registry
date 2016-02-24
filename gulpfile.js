@@ -1,24 +1,24 @@
 'use strict';
 
-var gulp = require('gulp');
-var GulpToolboxRegistry = require('./index');
-var testNodeJasmine = require('gulp-toolbox-test-node-jasmine');
-var pipeCoverageIstanbul = require('gulp-toolbox-pipe-coverage-istanbul');
+const gulp = require('gulp');
+const GulpToolboxRegistry = require('./index');
+const testNodeJasmine = require('gulp-toolbox-test-node-jasmine');
+const pipeCoverageIstanbul = require('gulp-toolbox-pipe-coverage-istanbul');
 
 gulp.registry(new GulpToolboxRegistry({
   toolboxes: [
-    testNodeJasmine
+    testNodeJasmine,
   ],
   pipes: [
-    pipeCoverageIstanbul
+    pipeCoverageIstanbul,
   ],
   config: {
     files: {
       test: {
         node: {
-          specs: ['test/**/*Spec.js']
-        }
-      }
-    }
-  }
+          specs: ['test/**/*Spec.js'],
+        },
+      },
+    },
+  },
 }));
