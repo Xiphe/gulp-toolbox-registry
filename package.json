@@ -30,7 +30,7 @@
     "eslint": "2.2.0",
     "eslint-config-airbnb": "6.0.2",
     "gulp": "gulpjs/gulp#4.0",
-    "gulp-toolbox-pipe-coverage-istanbul": "0.0.0",
+    "gulp-toolbox-pipe-coverage-istanbul": "0.0.1",
     "gulp-toolbox-test-node-jasmine": "0.1.0",
     "semantic-release": "4.3.5",
     "uberconfig": "0.0.1",
