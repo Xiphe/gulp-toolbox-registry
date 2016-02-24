@@ -1,10 +1,10 @@
 {
   "name": "gulp-toolbox-registry",
-  "version": "0.0.0",
   "description": "custom gulp registry for toolboxes",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "gulp",
@@ -32,6 +32,11 @@
     "uberconfig": "0.0.1",
     "undertaker-task-provider-registry": "1.0.1",
     "gulp-toolbox-test-node-jasmine": "0.1.0",
-    "gulp-toolbox-pipe-coverage-istanbul": "0.0.0"
+    "gulp-toolbox-pipe-coverage-istanbul": "0.0.0",
+    "semantic-release": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Xiphe/gulp-toolbox-registry.git"
   }
 }
