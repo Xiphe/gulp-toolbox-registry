@@ -17,6 +17,7 @@
     "node": "^5.0.0"
   },
   "dependencies": {
+    "async-eventemitter": "^0.2.2",
     "gulplog": "1.0.0",
     "through2": "2.0.1",
     "undertaker": "0.15.0"
