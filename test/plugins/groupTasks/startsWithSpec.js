@@ -1,6 +1,6 @@
 'use strict';
 
-const startsWith = require('../lib/plugins/groupTasks/startsWith');
+const startsWith = require('../../../lib/plugins/groupTasks/startsWith');
 
 describe('startsWithFactory', () => {
   it('returns a startsWith function', () => {
