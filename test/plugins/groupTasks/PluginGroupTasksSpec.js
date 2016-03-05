@@ -51,6 +51,7 @@ describe('PluginGroupTasks', () => {
       const name = 'fuchs';
       const args = { name };
       const theGroup = Symbol();
+      const at = jasmine.anything();
 
       Object.freeze(args);
       pluginGroupTasks.store = store;
@@ -59,12 +60,28 @@ describe('PluginGroupTasks', () => {
       fakeGroup.and.returnValue(theGroup);
 
       const newArgs = pluginGroupTasks.get(args);
-      const at = jasmine.anything();
 
       expect(newArgs.task).toBe(theGroup);
       expect(newArgs.name).toBe(name);
       expect(fakeStartsWith).toHaveBeenCalledWith(aTask, at, at);
       expect(fakeSkip).toHaveBeenCalledWith(aTask, at, at);
+    });
+
+    it('does nothing if no group could be formed', () => {
+      const aTask = Symbol();
+      const store = {
+        tasks: [aTask],
+      };
+      const name = 'igel';
+      const args = { name };
+
+      Object.freeze(args);
+      pluginGroupTasks.store = store;
+      fakeStartsWith.and.returnValue(true);
+      fakeSkip.and.returnValue(true);
+      fakeGroup.and.returnValue(null);
+
+      expect(pluginGroupTasks.get(args)).toBe(args);
     });
   });
 });
