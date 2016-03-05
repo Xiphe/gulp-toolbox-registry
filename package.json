@@ -25,7 +25,7 @@
   "peerDependencies": {
     "gulp": "gulpjs/gulp#4.0",
     "uberconfig": "^0.0.1",
-    "undertaker-task-provider-registry": "^1.1.0"
+    "undertaker-task-provider-registry": "^1.2.1"
   },
   "devDependencies": {
     "eslint": "2.3.0",
