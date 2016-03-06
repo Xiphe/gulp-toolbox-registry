@@ -20,4 +20,16 @@ describe('startsWith', () => {
     expect(result).toContain(okFixture);
     expect(result).not.toContain(notOkFixture);
   });
+
+  it('filters a list based on name', () => {
+    const nameStart = 'foo';
+    const filter = startsWith(nameStart);
+    const okFixture = { name: `${nameStart}bar` };
+    const notOkFixture = { name: 'barfoo' };
+
+    const result = [notOkFixture, okFixture].filter(filter);
+
+    expect(result).toContain(okFixture);
+    expect(result).not.toContain(notOkFixture);
+  });
 });
