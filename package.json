@@ -29,6 +29,7 @@
     "undertaker-task-provider-registry": "^1.2.1"
   },
   "devDependencies": {
+    "deep-freeze": "0.0.1",
     "eslint": "2.4.0",
     "eslint-config-airbnb": "6.1.0",
     "gulp": "gulpjs/gulp#4.0",
