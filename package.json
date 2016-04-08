@@ -24,7 +24,6 @@
     "undertaker": "0.15.0"
   },
   "peerDependencies": {
-    "gulp": "gulpjs/gulp#4.0",
     "uberconfig": "^0.1.0",
     "undertaker-task-provider-registry": "^1.2.1"
   },
