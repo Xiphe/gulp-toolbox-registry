@@ -24,7 +24,7 @@
     "undertaker": "0.15.0"
   },
   "peerDependencies": {
-    "uberconfig": "^0.1.0",
+    "uberconfig": "^0.1.1",
     "undertaker-task-provider-registry": "^1.2.1"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "gulp-toolbox-test-node-jasmine": "0.2.1",
     "proxyquire": "1.7.4",
     "semantic-release": "4.3.5",
-    "uberconfig": "0.1.0",
+    "uberconfig": "0.1.1",
     "undertaker-task-provider-registry": "1.2.1"
   },
   "repository": {
