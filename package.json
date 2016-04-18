@@ -31,7 +31,7 @@
     "deep-freeze": "0.0.1",
     "eslint": "2.8.0",
     "eslint-config-airbnb": "6.2.0",
-    "eslint-plugin-react": "4.3.0",
+    "eslint-plugin-react": "5.0.0",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-toolbox-pipe-coverage-istanbul": "0.2.2",
     "gulp-toolbox-reporter-coveralls": "0.1.1",
