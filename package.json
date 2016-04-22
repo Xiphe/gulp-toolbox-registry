@@ -30,7 +30,7 @@
   "devDependencies": {
     "deep-freeze": "0.0.1",
     "eslint": "2.8.0",
-    "eslint-config-airbnb": "7.0.0",
+    "eslint-config-airbnb": "8.0.0",
     "eslint-plugin-react": "4.3.0",
     "gulp": "gulpjs/gulp#4.0",
     "gulp-toolbox-pipe-coverage-istanbul": "0.2.2",
