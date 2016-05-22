@@ -1,6 +1,7 @@
 'use strict';
 
 const proxyquire = require('proxyquire');
+const errorMatching = require('../../helper/errorMatching');
 
 describe('PluginDecoratePipes', () => {
   let PluginDecoratePipes = null;
@@ -10,16 +11,6 @@ describe('PluginDecoratePipes', () => {
     const pluginDecoratePipes = new PluginDecoratePipes(pipes, plugins);
 
     return pluginDecoratePipes.decorateHelper({ helper: {} }).helper;
-  }
-
-  function errorMatching(str) {
-    return {
-      asymmetricMatch(actual) {
-        expect(actual).toEqual(jasmine.any(Error));
-        expect(actual.message).toEqual(jasmine.stringMatching(str));
-        return true;
-      },
-    };
   }
 
   beforeEach(() => {
