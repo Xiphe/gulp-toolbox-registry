@@ -1,7 +1,8 @@
 'use strict';
 
 const proxyquire = require('proxyquire');
-const EventEmitter = require('event-emitter');
+const events = require('events');
+const EventEmitter = events.EventEmitter;
 
 describe('PluginEmitCleanup', () => {
   let pluginEmitCleanup = null;
