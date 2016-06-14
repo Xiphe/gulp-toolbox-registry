@@ -37,7 +37,7 @@ describe('PluginForwardRef', () => {
       const taskName = 'foo';
 
       fakeRegistry.get.and.callFake(function get(name) {
-        return pluginForwardRef.get({ name, arguments }).task;
+        return pluginForwardRef.get({ name, arguments: arguments }).task;
       });
       const task = pluginForwardRef.get({ name: taskName, arguments: [] }).task;
 
