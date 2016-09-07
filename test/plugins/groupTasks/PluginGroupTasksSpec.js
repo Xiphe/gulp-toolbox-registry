@@ -27,7 +27,7 @@ describe('PluginGroupTasks', () => {
 
   describe('init', () => {
     it('puts a given store aside for later usage', () => {
-      const someStore = Symbol();
+      const someStore = Symbol('fixture');
 
       pluginGroupTasks.init(someStore);
 
@@ -44,13 +44,13 @@ describe('PluginGroupTasks', () => {
     });
 
     it('builds a grouped task from store', () => {
-      const aTask = Symbol();
+      const aTask = Symbol('fixture');
       const store = {
         tasks: [aTask],
       };
       const name = 'fuchs';
       const args = { name };
-      const theGroup = Symbol();
+      const theGroup = Symbol('fixture');
       const at = jasmine.anything();
 
       Object.freeze(args);
@@ -68,7 +68,7 @@ describe('PluginGroupTasks', () => {
     });
 
     it('does nothing if no group could be formed', () => {
-      const aTask = Symbol();
+      const aTask = Symbol('fixture');
       const store = {
         tasks: [aTask],
       };

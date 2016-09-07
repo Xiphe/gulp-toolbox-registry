@@ -1,6 +1,7 @@
 'use strict';
 
 const proxyquire = require('proxyquire');
+
 let fakeConflictHandler = null;
 let fakeValidations = [];
 let PluginUberconfig = null;

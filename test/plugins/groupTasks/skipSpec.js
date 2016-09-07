@@ -1,6 +1,7 @@
 'use strict';
 
 const proxyquire = require('proxyquire');
+
 const fakeArgv = { 'skip-bar': true };
 const skip = proxyquire('../../../lib/plugins/groupTasks/skip', {
   '../../argv': fakeArgv,

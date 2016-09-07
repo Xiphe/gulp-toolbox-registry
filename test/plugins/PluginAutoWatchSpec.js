@@ -118,7 +118,7 @@ describe('PluginAutoWatch', () => {
       let i = 0;
 
       fakeTaker.series.and.returnValue(taskWithWaitingLog);
-      fakeUberconfig.get.and.callFake(() => relatedFiles[i++]);
+      fakeUberconfig.get.and.callFake(() => relatedFiles[i++]); // eslint-disable-line no-plusplus
       pluginAutoWatch = new PluginAutoWatch({});
       pluginAutoWatch.init({ takerInst: fakeTaker });
       pluginAutoWatch.decorateTask(args.task);

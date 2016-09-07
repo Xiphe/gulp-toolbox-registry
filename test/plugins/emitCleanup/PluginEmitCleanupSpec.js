@@ -2,6 +2,7 @@
 
 const proxyquire = require('proxyquire');
 const events = require('events');
+
 const EventEmitter = events.EventEmitter;
 
 describe('PluginEmitCleanup', () => {
