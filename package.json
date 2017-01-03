@@ -20,7 +20,7 @@
     "async-eventemitter": "0.2.2",
     "gulplog": "1.0.0",
     "minimist": "1.2.0",
-    "through2": "2.0.1",
+    "through2": "2.0.3",
     "undertaker": "1.0.0"
   },
   "peerDependencies": {
