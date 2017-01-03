@@ -1,4 +1,5 @@
 /* eslint prefer-rest-params: 0 */
+
 'use strict';
 
 const PluginForwardRef = require('../../lib/plugins/PluginForwardRef');
